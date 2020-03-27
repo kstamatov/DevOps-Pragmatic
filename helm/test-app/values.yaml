@@ -1,0 +1,7 @@
+Deployment:
+  Namespace: testing
+  label: web-server
+  image: nginx
+  Port: 80
+
+Name: nginx

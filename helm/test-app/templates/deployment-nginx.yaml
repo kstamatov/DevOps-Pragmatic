@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Pod
+metadata:
+   name: {{ .Values.Name }} 
+   labels:
+       app: {{ .Values.Deployment.label }}
+       dep: devops
+spec:
+  containers:
+     - name: {{ .Values.Name }}
+       image: {{ .Values.Deployment.image }}
+       ports:
+          - containerPort: {{ .Values.Deployment.Port }}
+            name: {{ .Values.Name }}
